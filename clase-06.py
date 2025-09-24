@@ -157,44 +157,6 @@ except ValueError:
 except ZeroDivisionError:
     print("La altura no puede ser cero")
 
-# se desea registrar la calificacion que 6 personas dan a una pelicula (entre 1 y10 )
-#validar calificacion
-#calcular el promedio de calificaiones
-#contar cuantas personas pusieron una nota mayor a 7
-#detectar si alguna persona puso 1  mostrar mensaje cirtica muy negativa
-califications = 0
-calification = 0
-quantity = 6
-count = 0
-count_aprobed = 0
-negative_values = 0
-while count < quantity:
-    try:
-        calification = int(input(f"Ingrese calificación de persona {count+1} (1-10): "))
-        if 1 <= calification <= 10:
-            califications += calification
-            count += 1
-
-            if calification > 7:
-                count_aprobed += 1
-
-            if calification == 1:
-                print("¡ALERTA! Crítica muy negativa")
-                negative_values += 1
-        else:
-            print("Error: La calificación debe estar entre 1 y 10")
-    except ValueError:
-        print("Error: Debe ingresar un número entero")
-
-if count > 0:
-    promedio = califications / quantity
-    print("Resultados:")
-    print(f"Promedio de calificaciones: {promedio:.2f}")
-    print(f"Personas que calificaron con más de 7: {count_aprobed}")
-    print(f"Cantidad de críticas muy negativas: {negative_values}")
-else:
-    print("No se registraron calificaciones válidas")
-
 ### Ejercicio 9
 
 # 9. Ingresar el nombre de una fruta y mostrar el precio por kilo. Usar al menos 4 frutas distintas.
